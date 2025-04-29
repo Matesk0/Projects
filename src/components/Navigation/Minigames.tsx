@@ -1,3 +1,5 @@
+import "../css/Minigames.css";
+
 const Minigames = () => {
   return (
     <div>

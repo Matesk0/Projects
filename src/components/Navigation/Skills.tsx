@@ -1,8 +1,10 @@
+import "../css/Skills.css";
+
 const Skills = () => {
   return (
     <div>
       <h3>Skills</h3>
-      <p>Details about my skills.</p>
+      <p>Vypijem Branika (nezapijam nicim inym).</p>
     </div>
   );
 };
