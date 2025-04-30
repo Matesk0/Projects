@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "../css/Navigation.css";
 
 interface Props {
@@ -5,41 +6,56 @@ interface Props {
 }
 
 const Navigation = ({ onSelect }: Props) => {
+  const [activeSection, setActiveSection] = useState<string>("");
+
+  const handleClick = (section: string) => {
+    setActiveSection(section);
+    onSelect(section);
+  };
+
+  const getButtonClass = (section: string) =>
+    `pushable${activeSection === section ? " active" : ""}`;
+
   return (
     <nav>
       <div>
-        <button className="pushable" onClick={() => onSelect("skills")}>
-          <span className="shadow"></span>
-          <span className="edge"></span>
-          <span className="front">Skills</span>
+        <button
+          className={getButtonClass("skills")}
+          onClick={() => handleClick("skills")}
+        >
+          <span>Skills</span>
         </button>
       </div>
       <div>
-        <button className="pushable" onClick={() => onSelect("projects")}>
-          <span className="shadow"></span>
-          <span className="edge"></span>
-          <span className="front">Projects</span>
+        <button
+          className={getButtonClass("projects")}
+          onClick={() => handleClick("projects")}
+        >
+          <span>Projects</span>
         </button>
       </div>
       <div>
-        <button className="pushable" onClick={() => onSelect("contacts")}>
-          <span className="shadow"></span>
-          <span className="edge"></span>
-          <span className="front">Contacts</span>
+        <button
+          className={getButtonClass("contacts")}
+          onClick={() => handleClick("contacts")}
+        >
+          <span>Contacts</span>
         </button>
       </div>
       <div>
-        <button className="pushable" onClick={() => onSelect("blog")}>
-          <span className="shadow"></span>
-          <span className="edge"></span>
-          <span className="front">Blog</span>
+        <button
+          className={getButtonClass("blog")}
+          onClick={() => handleClick("blog")}
+        >
+          <span>Blog</span>
         </button>
       </div>
       <div>
-        <button className="pushable" onClick={() => onSelect("minigames")}>
-          <span className="shadow"></span>
-          <span className="edge"></span>
-          <span className="front">Minigames</span>
+        <button
+          className={getButtonClass("minigames")}
+          onClick={() => handleClick("minigames")}
+        >
+          <span>Minigames</span>
         </button>
       </div>
     </nav>
