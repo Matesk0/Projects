@@ -8,3 +8,5 @@ day 2 - added animations to buttons, changed socials to different buttons
 added pfp with change while hovering on it
 
 day 3 - changed som functionality, changed buttons of navigation
+
+day 4 - learning React (no change)
