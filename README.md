@@ -10,3 +10,5 @@ added pfp with change while hovering on it
 day 3 - changed som functionality, changed buttons of navigation
 
 day 4-5 - learning React (no change)
+
+.
