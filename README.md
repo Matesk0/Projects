@@ -11,4 +11,4 @@ day 3 - changed som functionality, changed buttons of navigation
 
 day 4-5 - learning React (no change)
 
-.
+..
